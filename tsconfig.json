@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": false,
+    "module": "esnext",
+    "jsx": "preserve",
+    "target": "es2016",
+    "lib": ["es2016", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@appNext/*": ["appNext/*"]
+    },
+    "moduleResolution": "node",
+    "typeRoots": ["typings"],
+    "allowSyntheticDefaultImports": true,
+    "outDir": "temp"
+  },
+  "exclude": ["dist"]
+}

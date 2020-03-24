@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% htmlWebpackPlugin.files.css.forEach((cssFile) => { %>
+    <link rel="preload" href="<%=cssFile%>" as="style" />
+    <%}) %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div id="app-root"></div>
+    <% htmlWebpackPlugin.files.css.forEach((cssFile) => { %>
+    <link rel="stylesheet" href="<%=cssFile%>" /> <%}) %> <% htmlWebpackPlugin.files.js.forEach((jsFile) => { %>
+    <script type="text/javascript" src="<%=jsFile%>" ref="stylesheet"></script>
+    <%}) %>
+  </body>
+</html>

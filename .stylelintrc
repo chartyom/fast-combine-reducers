@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-airbnb", "stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-prettier", "stylelint-order"],
+  "rules": {
+    "indentation": 2,
+    "max-nesting-depth": 4,
+    "selector-max-id": 1,
+    "string-quotes": "single",
+    "no-descending-specificity": null,
+    "order/order": [
+      ["custom-properties", "declarations"],
+      {
+        "disableFix": true
+      }
+    ]
+  },
+  "syntax": "scss"
+}
